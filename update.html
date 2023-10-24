@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update perfil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <section class="flex">
+            <a href="home.html" class="logo">CodeRise</a>
+            <form action="" method="post" class="search-form">
+                <input type="text" name="search_box" placeholder="procure por cursos.." required maxlength="100">
+                <button type="submit" class="fas fa-search"></button>
+            </form>
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <div id="search-btn" class="fas fa-search"></div>
+                <div id="user-btn" class="fas fa-user"></div>
+                <div id="toggle-btn" class="fas fa-sun"></div>
+            </div>
+    
+            <div class="profile">
+                <img src="images/pic-1.svg" class="image" alt="">
+                <h3 class="name">Aluno</h3>
+                <p class="role">estudante</p>
+                <a href="profile.html" class="btn">ver perfil</a>
+                <a href="#" class="option-btn">Sair</a>
+            </div>
+        </section>
+    </header>
+    
+    <div class="side-bar">
+        
+        <div id="close-btn">
+            <i class="fas fa-times"></i>
+        </div>
+        <br><br><br>
+        <nav class="navbar">
+            <a href="home.html"><i class="fas fa-home"></i><span>home</span></a>
+            <a href="#cursos"><i class="fas fa-graduation-cap"></i><span>cursos</span></a>
+            <a href="#"><i class="fas fa-question"></i><span>sobre nós</span></a>
+        </nav>
+    
+    </div> 
+    <section class="form-container">
+
+        <form action="" method="post" enctype="multipart/form-data">
+           <h3>update perfil</h3>
+           <p>nome</p>
+           <input type="text" name="name" placeholder="nome" maxlength="50" class="box">
+           <p>email</p>
+           <input type="email" name="email" placeholder="nome@dominio.com" maxlength="50" class="box">
+           <p>senha</p>
+           <input type="password" name="old_pass" placeholder="entre com sua senha antiga" maxlength="20" class="box">
+           <p>nova senha</p>
+           <input type="password" name="new_pass" placeholder="entre com sua senha nova" maxlength="20" class="box">
+           <p>confirme senha</p>
+           <input type="password" name="c_pass" placeholder="confirme sua senha nova" maxlength="20" class="box">
+           
+           <input type="submit" value="update profile" name="submit" class="btn">
+        </form>
+<script src="js/script.js"></script>
+</body>
+</html>
