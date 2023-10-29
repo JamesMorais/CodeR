@@ -8,55 +8,61 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header">
-        <section class="flex">
-            <a href="index.html" class="logo">CodeRise</a>
-            <form action="" method="post" class="search-form">
-                <input type="text" name="search_box" placeholder="procure por cursos.." required maxlength="100">
-                <button type="submit" class="fas fa-search"></button>
-            </form>
-            <div class="icons">
-                <div id="menu-btn" class="fas fa-bars"></div>
-                <div id="search-btn" class="fas fa-search"></div>
-                <div id="user-btn" class="fas fa-user"></div>
-                <div id="toggle-btn" class="fas fa-sun"></div>
-            </div>
-    
-            <div class="profile">
-                <img src="images/pic-1.svg" class="image" alt="">
-                <h3 class="name">Aluno</h3>
-                <p class="role">estudante</p>
-                <a href="profile.html" class="btn">ver perfil</a>
-                <a href="#" class="option-btn">Sair</a>
-            </div>
-        </section>
-    </header>
-    
-    <div class="side-bar">
+    <div class="gradient">
+        <span class="color-1"></span>
+        <span class="color-2"></span>
+        <span class="color-3"></span>
+        <span class="color-4"></span>
+        <span class="color-5"></span>
         
-        <div id="close-btn">
-            <i class="fas fa-times"></i>
-        </div>
-        <br><br><br>
-        <nav class="navbar">
-            <a href="index.html"><i class="fas fa-home"></i><span>home</span></a>
-            <a href="#cursos"><i class="fas fa-graduation-cap"></i><span>cursos</span></a>
-            <a href="#"><i class="fas fa-question"></i><span>sobre nós</span></a>
-        </nav>
-    
-    </div>
-    <section class="form-container">
-
-        <form action="" method="post" enctype="multipart/form-data">
-           <h3>login now</h3>
-           <p>your email <span>*</span></p>
-           <input type="email" name="email" placeholder="enter your email" required maxlength="50" class="box">
-           <p>your password <span>*</span></p>
-           <input type="password" name="pass" placeholder="enter your password" required maxlength="20" class="box">
-           <input type="submit" value="login new" name="submit" class="btn">
-        </form>
-     
-     </section>
+     </div>
+   <div class="content-wrapper">
+         
+           <header class="header">
+          <section class="flex">
+              <a href="index.html" class="logo">CodeRise</a>
+              <div class="icons">
+                  <div id="menu-btn" class="fas fa-bars"></div>
+                  <div id="user-btn" class="fas fa-user"></div>
+                  <div id="toggle-btn" class="fas fa-sun"></div>
+              </div>
+              <div class="profile">
+                  <img src="images/pic-1.svg" class="image" alt="">
+                  <h3 class="name">Aluno</h3>
+                  <p class="role">estudante</p>
+                  <a href="profile.html" class="btn">ver perfil</a>
+                  <a href="login.html" class="option-btn">Sair</a>
+              </div>
+          </section>
+           </header>
+           
+           <div class="side-bar">
+       
+          <div id="close-btn">
+              <i class="fas fa-times"></i>
+          </div>
+          <br><br><br>
+          <nav class="navbar">
+              <a href="index.html"><i class="fas fa-home"></i><span>home</span></a>
+              <a href="#cursos"><i class="fas fa-graduation-cap"></i><span>cursos</span></a>
+              <a href="#"><i class="fas fa-question"></i><span>sobre nós</span></a>
+          </nav>
+           
+           </div>
+           <section class="form-container">
+          <form action="" method="post" enctype="multipart/form-data">
+             <h3>login</h3>
+             <p>seu email <span>*</span></p>
+             <input type="email" name="email" placeholder="email" required maxlength="50" class="box">
+             <p>sua senha <span>*</span></p>
+             <input type="password" name="senha" placeholder="senha" required maxlength="20" class="box">
+             <input type="submit" value="Fazer login" name="submit" class="btn">
+             <p><a href="recuperaSenha.html">Esqueceu Senha?</a></p>
+             <p><a href="cadastro.html">Não possui conta? Cadastre-se aqui!</a></p>
+          </form>
+       
+       </section>
+   </div>
 
 <script src="js/script.js"></script>
 </body>

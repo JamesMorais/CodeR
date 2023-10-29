@@ -25,34 +25,55 @@ toggleBtn.onclick = (e) =>{
         disableDarkMode();
     }
 }
-let profile = document.querySelector('.header .flex .profile');
 
-document.querySelector('#user-btn').onclick = () =>{
-    profile.classList.toggle('active');
-    search.classList.remove('active');
-}
-let search = document.querySelector('.header .flex .search-form');
+document.addEventListener('DOMContentLoaded', function() {
+    let sideBar = document.querySelector('.side-bar');
+    let body = document.body;
 
-document.querySelector('#search-btn').onclick = () =>{
-    search.classList.toggle('active');
-    profile.classList.remove('active');
-}
-let sideBar = document.querySelector('.side-bar');
+    function updateSidebarVisibility() {
+        if (window.innerWidth >= 1200) {
+            sideBar.classList.add('active');
+            body.classList.add('active');
+        } else {
+            sideBar.classList.remove('active');
+            body.classList.remove('active');
+        }
+    }
 
-document.querySelector('#menu-btn').onclick = () =>{
-    sideBar.classList.toggle('active');
-    body.classList.toggle('active')
-}
+    updateSidebarVisibility();
 
-document.querySelector('#close-btn').onclick = () =>{
-    sideBar.classList.remove('active');
-    body.classList.remove('active');
- }
- window.onscroll = () =>{
-    profile.classList.remove('active');
-    search.classList.remove('active');
-    if(window.innerWidth < 1200){
+    window.addEventListener('resize', updateSidebarVisibility);
+
+    let profile = document.querySelector('.header .flex .profile');
+    let search = document.querySelector('.header .flex .search-form');
+    let userBtn = document.querySelector('#user-btn');
+    let menuBtn = document.querySelector('#menu-btn');
+    let closeBtn = document.querySelector('#close-btn');
+
+    userBtn.onclick = () => {
+        profile.classList.toggle('active');
+        search.classList.remove('active');
+    };
+
+    menuBtn.onclick = () => {
+        sideBar.classList.toggle('active');
+        body.classList.toggle('active');
+    };
+
+    closeBtn.onclick = () => {
         sideBar.classList.remove('active');
         body.classList.remove('active');
-    }
- }
+    };
+
+    window.onscroll = () => {
+        profile.classList.remove('active');
+        search.classList.remove('active');
+        if (window.innerWidth < 1200) {
+            sideBar.classList.remove('active');
+            body.classList.remove('active');
+        }
+    };
+});
+
+
+ 

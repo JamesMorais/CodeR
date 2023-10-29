@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <title>perfil</title>
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
     <div class="gradient">
@@ -49,35 +50,17 @@
             </nav>
         
         </div>
-        <section class="user-profile">
-            <h1 class="heading">Seu perfil</h1>
+        <section class="form-container">
+            <form action="" method="post" enctype="multipart/form-data">
+               <h3>Recuperar Senha</h3>
+               <p>Por favor, informe o endereço de e-mail vinculado à sua conta. Enviaremos um link para o seu e-mail com as instruções para restaurá-lo.</p>
+               <p>seu email <span>*</span></p>
+               <input type="email" name="email" placeholder="email" required maxlength="50" class="box">
+               <input type="submit" value="Enviar" name="submit" class="btn">
+            </form>
         
-            <div class="info">
-        
-               <div class="user">
-                <img src="images/pic-1.svg" alt="">
-                  <h3>Aluno</h3>
-                  <p>estudante</p>
-               </div>
-        
-               <div class="box-container">
-        
-                  <div class="box">
-                     <div class="flex">
-                        <i class="fas fa-bookmark"></i>
-                        <div>
-                           <span>x</span>
-                           <p>playlists salvas</p>
-                        </div>
-                     </div>
-                     <a href="#" class="inline-btn">ver playlists</a>
-                  </div>
-        
-               </div>
-            </div>
-        </section>
+         </section>
     </div>
-<script src="js/script.js"></script>
-    
+    <script src="js/script.js"></script>   
 </body>
 </html>

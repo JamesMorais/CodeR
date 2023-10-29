@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <title>perfil</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -49,35 +49,25 @@
             </nav>
         
         </div>
-        <section class="user-profile">
-            <h1 class="heading">Seu perfil</h1>
+        <section class="form-container">
+            <form action="" method="post" enctype="multipart/form-data">
+               <h3>Cadastrar perfil</h3>
         
-            <div class="info">
-        
-               <div class="user">
-                <img src="images/pic-1.svg" alt="">
-                  <h3>Aluno</h3>
-                  <p>estudante</p>
-               </div>
-        
-               <div class="box-container">
-        
-                  <div class="box">
-                     <div class="flex">
-                        <i class="fas fa-bookmark"></i>
-                        <div>
-                           <span>x</span>
-                           <p>playlists salvas</p>
-                        </div>
-                     </div>
-                     <a href="#" class="inline-btn">ver playlists</a>
-                  </div>
-        
-               </div>
-            </div>
-        </section>
+                <p>Digite seu nome:</p>
+                <input type="text" name="nome" placeholder="nome" maxlength="50" class="box">
+                <p>Digite seu email:</p>
+                <input type="text" name="email" placeholder="nome@dominio.com"  maxlength="50" class="box">
+                <p>Digite sua senha:</p>
+                <input type="password" name="senha" placeholder="senha" maxlength="20" class="box">
+                <p>confirme sua senha:</p>
+               <input type="password" name="c_senha" placeholder="confirme sua senha" maxlength="20" class="box">
+               <p>Digite seu Telefone:</p>
+                <input type="text" name="tel" placeholder="Telefone" maxlength="50" class="box">
+                <br><br>
+               <input type="submit" value="cadastrar perfil" name="submit" class="btn">
+               <p><a href="login.html">Já possui conta? Faça login aqui!</a></p>
+            </form>
     </div>
-<script src="js/script.js"></script>
-    
+    <script src="js/script.js"></script>
 </body>
 </html>
