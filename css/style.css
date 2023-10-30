@@ -584,7 +584,12 @@ flex-btn{
  .form-container form p span{
     color: var(--red);
  }
- 
+ .form-container form a{
+   color: var(--black);
+ }
+ .form-container form a:hover{
+   color: var(--red);
+ }
  .form-container form .box{
     font-size: 1.8rem;
     color: var(--black);
