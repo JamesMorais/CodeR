@@ -30,7 +30,7 @@ function autenticarUsuario(){
 		// Armazenado token gerado pro usuario no localStorage
 		localStorage.setItem("token", token);
 
-		window.location.href = "/index.html";
+		window.location.href = "/home.html";
 	  });
 	} else {
 	  console.error("Erro ao tentar fazer login:", response.status);
