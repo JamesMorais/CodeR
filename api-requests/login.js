@@ -22,12 +22,11 @@ function autenticarUsuario(){
 })     //parametro para receber a promisse
 .then(function (response) {
 	if (response.status === 401) {
-	  mostrarMensagem("Credenciais inválidas");
+	  console.log("Email ou senha inválidos")
 	} else if (response.status === 200) {
 	  response.json().then(function (data) {
 		var token = data.token;
 		console.log("Token recebido:", token);
-
 		// Armazenado token gerado pro usuario no localStorage
 		localStorage.setItem("token", token);
 
@@ -38,12 +37,10 @@ function autenticarUsuario(){
 	  // colocar outros tratamnetos com mensagens
 	}
   })
-
-
-
-
-
-
-
-
 }
+
+  
+formulario.addEventListener("submit", function(event) {
+	event.preventDefault();
+	autenticarUsuario();
+   });
