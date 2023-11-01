@@ -19,22 +19,22 @@ function autenticarUsuario(){
 		email: email.value,
 		senha: senha.value,
 	  }),
-})     //parametro para receber a promisse
+})     //parametro para receber a resposta
 .then(function (response) {
 	if (response.status === 401) {
-	  console.log("Email ou senha inválidos")
+	  console.log("Email ou senha inválidos")//implementar mensagem
 	} else if (response.status === 200) {
 	  response.json().then(function (data) {
 		var token = data.token;
 		console.log("Token recebido:", token);
-		// Armazenado token gerado pro usuario no localStorage
+		// Armazenando token gerado pro usuario no localStorage
 		localStorage.setItem("token", token);
 
 		window.location.href = "/home.html";
 	  });
 	} else {
 	  console.error("Erro ao tentar fazer login:", response.status);
-	  // colocar outros tratamnetos com mensagens
+	  // colocar outros tratamentos com mensagens
 	}
   })
 }

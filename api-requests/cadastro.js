@@ -22,20 +22,18 @@ function cadastrarUsuario() {
 	})
 	  .then(function (response) {
 		if (response.status === 422) {
-		  mostrarMensagem("Usuário existe, faça login");
+		//ainda vai ser implementado mostrarMensagem 
+		  mostrarMensagem("Usuário existe, faça login");//
 		  limparCampos();
 		} else if (response.status === 201) {
 		  window.location.href = "/login.html";
 		  limparCampos();
-		} else {
-		  console.error("Erro ao cadastrar usuário:", response.status);
-		  limparCampos();
-  
-		}
+		} 
 	  })
 	  .catch(function (error) {
 		console.error("Erro ao se cadastrar:", error);
-		console.log(window.location.origin);
+		//implementar msg
+		
   
 	  });
   }
