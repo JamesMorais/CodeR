@@ -69,7 +69,7 @@ const checarValidade = () => {
     getCursos();
 
     // def Intervalo para verificar token
-    setInterval(getCursos, 60000); // Verifica a cada 1 minuto
+    setInterval(getCursos, 7200000); // Verifica a cada 2 horas
 };
 
 // Chama a função principal
