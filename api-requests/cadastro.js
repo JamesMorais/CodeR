@@ -26,7 +26,7 @@ function cadastrarUsuario() {
 		  mostrarMensagem("Usuário existe, faça login");//
 		  limparCampos();
 		} else if (response.status === 201) {
-		  window.location.href = "/login.html";
+		  window.location.href = "/index.html";
 		  limparCampos();
 		} 
 	  })
