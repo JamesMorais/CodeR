@@ -1,20 +1,11 @@
 
-  // const sair = () => {
-  //   // Remover o token do localStorage
-  //   localStorage.removeItem('token');
-  
-  //   // Redirecionar para a página de login
-  //   window.location.href = "/index.html";
-  // };
-  
-
 
 
 const recuperarToken = () => {
   // Recuperar o token do localStorage
   const token = localStorage.getItem('token');
   if (!token) {
-    window.location.href = "/index.html"; // Redirecionar para a página de login se o token não estiver presente
+    window.location.href = "/index.html"; 
   }
   verificarToken(token);
 };
@@ -34,7 +25,7 @@ const verificarToken = (token) => {
       mostrarConteudoPrivado(); // Função para mostrar conteúdo privado
     } else if (response.status === 403) {
       console.log(response);
-      window.location.href = "/index.html"; // Redireciona para a página de login
+      window.location.href = "/index.html"; 
     }
   })
   .catch(error => {
