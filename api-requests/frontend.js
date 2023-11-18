@@ -1,5 +1,3 @@
-
-
 const recuperarToken = () => {
     const token = localStorage.getItem('token');
 
@@ -9,8 +7,8 @@ const recuperarToken = () => {
     }
 
     // função requisiçao
-    const cursosBackend = () => {
-        fetch('http://localhost:8080/cursos/backend', {
+    const cursosFront = () => {
+        fetch('http://localhost:8080/cursos/frontend', {
             headers: {
                 'Authorization': `Bearer ${token}`,
                 "Content-Type": "application/json",
@@ -36,7 +34,7 @@ const recuperarToken = () => {
                 const links = data.map((curso, index) => {
                     //criar link para atribuir cursos
                     const link = document.createElement('a');
-                    link.href = curso.playlist;
+                    link.href = curso.linkPlaylist;
                     link.classList.add('box');
                    //criar elemento icon-video
                     const playIcon = document.createElement('i');
@@ -69,16 +67,19 @@ const recuperarToken = () => {
         })
         .finally(() => {
             // Agendar a próxima execução após 2 horas
-            setTimeout(cursosBackend, 7200000);
+            setTimeout(cursosFront, 7200000);
         });
     };
 
     // Chamando a função trazer cursos
-    cursosBackend();
+    cursosFront();
     
 }
 
 // Chamando a função principal
 
 recuperarToken();
+
+
+
 
