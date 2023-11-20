@@ -17,8 +17,8 @@ function cadastrarUsuario() {
 	  body: JSON.stringify({
 		nome: nome.value,
 		email: email.value,
-		senha: senha.value,
-	  }),
+		senha: senha.value
+	  })//,
 	})
 	  .then(function (response) {
 		if (response.status === 422) {
