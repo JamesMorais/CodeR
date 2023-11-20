@@ -18,6 +18,8 @@ curso.style.display = shouldShow ? 'block' : 'none';
  })
 
 }
+
+
 	
 
 }
