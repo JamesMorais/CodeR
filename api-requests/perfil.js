@@ -48,4 +48,3 @@ const recuperarToken = () => {
 // Chamando a função principal
 
 recuperarToken();
-

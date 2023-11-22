@@ -22,7 +22,9 @@ const verificarToken = (token) => {
   .then(response => {
     if (response.status === 200) {
      
-      mostrarConteudoPrivado(); // Função para mostrar conteúdo privado
+      // mostrarConteudoPrivado(); // Função para mostrar conteúdo privado
+
+      //colocar uma mensagem seja bem vindo para os estudantes
     } else if (response.status === 403) {
       console.log(response);
       window.location.href = "/index.html"; 
@@ -37,19 +39,18 @@ const verificarToken = (token) => {
 });
 };
 
-const mostrarConteudoPrivado = () => {
-  // Mostrar elementos do perfil
-  document.querySelector('.profile').style.display = 'block';
+// const mostrarConteudoPrivado = () => {
+//   // Mostrar elementos do perfil
+//   document.querySelector('.profile').style.display = 'block';
 
-  // Mostrar elementos de cursos
-  const boxes = document.querySelectorAll('.box');
-  boxes.forEach(box => {
-    box.style.display = 'block';
-  });
-};
+//   // Mostrar elementos de cursos
+//   const boxes = document.querySelectorAll('.box');
+//   boxes.forEach(box => {
+//     box.style.display = 'block';
+//   });
+// };
 
 // Chama a função recuperarToken
 recuperarToken();
 
-// const botaoSair = document.querySelector('.option-btn');
-// botaoSair.addEventListener('click', sair);
+

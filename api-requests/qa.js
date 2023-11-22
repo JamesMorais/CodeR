@@ -10,7 +10,7 @@ const recuperarToken = () => {
         const cursosContainer = document.getElementById('cursos-container');
         const cursos = cursosContainer.getElementsByClassName('box');
 
-        Array.from(cursos).forEach(curso => {//intera ocada elemento cursos e pegar pelo tit
+        Array.from(cursos).forEach(curso => {//intera ocada elemento cursos e pega
             const tituloCurso = curso.querySelector('h3').textContent.toLowerCase();
             const shouldShow = tituloCurso.includes(titulo);
             curso.style.display = shouldShow ? 'block' : 'none';
@@ -18,8 +18,8 @@ const recuperarToken = () => {
     }
 
 
-    const cursosBases = () => {
-        fetch(`http://localhost:8080/cursos/bases`, {
+    const cursosQA = () => {
+        fetch(`http://localhost:8080/cursos/qa`, {
             headers: {
                 'Authorization': `Bearer ${token}`,
                 'Content-Type': 'application/json',
@@ -62,7 +62,6 @@ const recuperarToken = () => {
                 cursosContainer.append(...links);
             } else {
                 console.log('Nenhum curso encontrado para esta área.');
-                
             }
         })
         .catch(erro => {
@@ -70,7 +69,7 @@ const recuperarToken = () => {
         })
         .finally(() => {
             // Agendar a próxima execução após 2 horas
-            setTimeout(() => cursosBases(), 7200000);
+            setTimeout(() => cursosQA, 7200000);
         });
     };
 
@@ -86,9 +85,8 @@ const recuperarToken = () => {
         search(titulo);
     });
     
-
-    // chama funçao de cursos
-    cursosBases();
+    // funçao de cursos
+    cursosQA();
 }
 
 // funçao de token
