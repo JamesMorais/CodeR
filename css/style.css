@@ -313,6 +313,13 @@ flex-btn{
     font-size: 1.8rem;
     color: var(--light-color);
 }
+.header .flex .profile .aviso{
+   font-size: 1.8rem;
+   color: var(--light-color);
+}
+.header .flex .profile p span{
+   color: var(--red);
+}
 #search-btn{
     display: none;
 }
