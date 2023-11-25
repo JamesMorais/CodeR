@@ -31,7 +31,7 @@ const recuperarToken = () => {
         })
         .then(response => {
             if (!response.ok) {
-                if (response.status === 403) {
+                if (response.status === 401) {
                     window.location.href = "/index.html";
                 }
                 throw new Error(`${response.status} - ${response.statusText}`);
@@ -80,8 +80,8 @@ const recuperarToken = () => {
             console.error('Erro na requisição:', erro);
         })
         .finally(() => {
-            // Agendar a próxima execução após 2 horas
-            setTimeout(cursosFront, 7200000);
+            // Agendar a próxima execução após 1 horas
+            setTimeout(cursosFront, 3600000);
         });
     };
     

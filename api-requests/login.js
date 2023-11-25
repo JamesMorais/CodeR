@@ -37,6 +37,9 @@ function autenticarUsuario(){
 	  // colocar outros tratamentos com mensagens
 	}
   })
+  .catch(erro => {
+	console.error('Erro na requisição:', erro);
+})
 }
 
   
