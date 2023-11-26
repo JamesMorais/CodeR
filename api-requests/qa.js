@@ -19,7 +19,7 @@ const recuperarToken = () => {
 
 
     const cursosQA = () => {
-        fetch(`http://localhost:8080/cursos/qa`, {
+        fetch(`https://simple-porter-production.up.railway.app/cursos/qa`, {
             headers: {
                 'Authorization': `Bearer ${token}`,
                 'Content-Type': 'application/json',

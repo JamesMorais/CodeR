@@ -11,7 +11,7 @@ const recuperarToken = () => {
 };
 
 const verificarToken = (token) => {
-  fetch("http://localhost:8080/users/verificarToken", {
+  fetch("https://simple-porter-production.up.railway.app/users/verificarToken", {
     method: "POST",
     headers: {
       'Content-Type': 'application/json',
