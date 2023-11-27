@@ -59,7 +59,7 @@ const recuperarToken = () => {
 
                     //criando imagem
                     const img = document.createElement('img');
-                    img.src = `images/post-1-${index + 2}.png`; 
+                    img.src = `images/post-1-${index + 1}.png`; 
                     link.appendChild(img);
 
                     const h3 = document.createElement('h3');
