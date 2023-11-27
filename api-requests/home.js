@@ -5,7 +5,7 @@ const recuperarToken = () => {
   // Recuperar o token do localStorage
   const token = localStorage.getItem('token');
   if (!token) {
-    window.location.href = "/index.html"; 
+    window.location.href = "index.html"; 
   }
   verificarToken(token);
 };
@@ -26,7 +26,7 @@ const verificarToken = (token) => {
 
       //colocar uma mensagem seja bem vindo para os estudantes
     } else if (response.status === 401 || response.status ==403) {
-      window.location.href = "/index.html"; 
+      window.location.href = "index.html"; 
     }
   })
   .catch(error => {

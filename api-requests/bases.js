@@ -2,7 +2,7 @@ const recuperarToken = () => {
     const token = localStorage.getItem('token');
 
     if (!token) {
-        window.location.href = "/index.html";
+        window.location.href = "index.html";
         return;
     }
 
@@ -29,7 +29,7 @@ const recuperarToken = () => {
         .then(response => {
             if (!response.ok) {
                 if (response.status === 401) {
-                    window.location.href = "/index.html";
+                    window.location.href = "index.html";
                 }
                 throw new Error(`${response.status} - ${response.statusText}`);
             }

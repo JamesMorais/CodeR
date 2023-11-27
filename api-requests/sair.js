@@ -4,7 +4,7 @@ const sair = () => {
     localStorage.removeItem('token');
   
     // Redirecionar para a página de login
-    window.location.href = "/index.html";
+    window.location.href = "index.html";
   };
   
 
