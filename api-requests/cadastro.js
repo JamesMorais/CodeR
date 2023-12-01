@@ -3,6 +3,7 @@ const formulario = document.querySelector("form");
 const nome = document.getElementById("nome");
 const email = document.getElementById("email");
 const senha = document.getElementById("password");
+
 function cadastrarUsuario() {
  
 

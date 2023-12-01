@@ -138,6 +138,78 @@ document.addEventListener('DOMContentLoaded', function() {
             };
         }
     }
+    /*
+    const notificationContainer = document.getElementById('notification-container');
+
+    function showNotification(message, type) {
+      
+        const notification = document.createElement('div');
+        notification.className = `notification ${type}`;
+        notification.textContent = message;
+
+       
+        notificationContainer.innerHTML = '';
+        notificationContainer.appendChild(notification);
+
+        
+        setTimeout(() => {
+            notificationContainer.innerHTML = '';
+        }, 5000); 
+    }
+
+   
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault(); // Impede o envio padrão do formulário para evitar a atualização da página
+
+        // Aqui você deve implementar a lógica para verificar o sucesso ou falha do cadastro no back-end
+        
+        const isSuccessful = true; // Altere para false para simular um erro
+
+        if (isSuccessful) {
+            showNotification('Cadastro realizado com sucesso!', 'success');
+           
+            // window.location.href = index.html';
+        } else {
+            showNotification('Erro ao cadastrar. Verifique suas informações e tente novamente.', 'error');
+        }
+    });*/
+    let notificationContainer = document.getElementById('notification-container');
+
+    function showNotification(message, type) {
+        const notification = document.createElement('div');
+        notification.className = `notification ${type}`;
+        notification.textContent = message;
+
+        notificationContainer.innerHTML = '';
+        notificationContainer.appendChild(notification);
+
+        setTimeout(() => {
+            notificationContainer.innerHTML = '';
+        }, 5000);
+    }
+
+    const forms = document.querySelectorAll('form');
+
+    forms.forEach(form => {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Aqui você deve implementar a lógica para verificar o sucesso ou falha do login/cadastro no back-end
+            // Por enquanto, vamos simular um cenário de sucesso
+            const isSuccessful = true; // Altere para false para simular um erro
+
+            if (isSuccessful) {
+                showNotification('Ação realizada com sucesso!', 'success');
+                // Você pode redirecionar o usuário para a página desejada após uma ação bem-sucedida
+                // window.location.href = 'pagina_sucesso.html';
+            } else {
+                showNotification('Erro ao realizar a ação. Verifique suas informações e tente novamente.', 'error');
+            }
+        });
+    });
+    
 });
 
 
