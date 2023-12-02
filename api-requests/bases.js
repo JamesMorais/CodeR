@@ -19,7 +19,7 @@ const recuperarToken = () => {
 
 
     const cursosBases = () => {
-        fetch(`https://simple-porter-production.up.railway.app/cursos/bases`, {
+        fetch(`http://localhost:8080/cursos/bases`, {
             headers: {
                 'Authorization': `Bearer ${token}`,
                 'Content-Type': 'application/json',

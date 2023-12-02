@@ -22,7 +22,7 @@ const recuperarToken = () => {
 
     // função requisiçao
     const cursosFront = () => {
-        fetch('https://simple-porter-production.up.railway.app/cursos/frontend', {
+        fetch('http://localhost:8080/cursos/frontend', {
             headers: {
                 'Authorization': `Bearer ${token}`,
                 "Content-Type": "application/json",

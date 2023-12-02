@@ -7,7 +7,7 @@ const senha = document.getElementById("password");
 function cadastrarUsuario() {
  
 
-	fetch("https://simple-porter-production.up.railway.app/users/cadastro", {
+	fetch("http://localhost:8080/users/cadastro", {
 	  headers: {
 		"Content-Type": "application/json",
 		'Accept': "application/json",
